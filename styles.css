@@ -60,14 +60,11 @@ h3 { font-family: "Ubuntu"; font-size: var(--size3); color: var(--text-norm); fo
 
 html {
     background-image: 
-    url("../globe.png"),
-        linear-gradient(
-        90deg,
-        rgb(17 14 14) 100%
-      );
-    background-position: top 0px left 0px center;
-    background-repeat: no-repeat repeat;
+    url("public/globe.png");
+    background-position: left top, center;
+    background-repeat: no-repeat, repeat;
     background-size: cover;
+    background-color: var(--bg);
     overflow-x: hidden !important;
 }
 .content {
