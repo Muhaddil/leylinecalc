@@ -46,9 +46,29 @@ h3 { font-family: "Ubuntu"; font-size: var(--size3); color: var(--text-norm); fo
 .hidden { display: none; }
 .shown  { display: flex; }
 
+::-webkit-scrollbar {
+    background-color: var(--bg-light);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 100px;
+    border: 3px solid var(--bg-light);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--secondary);
+}
+
 html {
-    background: var(--bg);
-    overflow-x: hidden;
+    background-image: 
+    url("../globe.png"),
+        linear-gradient(
+        90deg,
+        rgb(17 14 14) 100%
+      );
+    background-position: top 0px left 0px center;
+    background-repeat: no-repeat repeat;
+    background-size: cover;
+    overflow-x: hidden !important;
 }
 .content {
     align-items: flex-start;   /* use this instead of "top" */
@@ -63,6 +83,11 @@ h1 {
     padding: 20px;
     box-shadow: 0 0 40px 40px var(--bg);
     z-index: 999;
+}
+
+.calc-container, .info-head, .info-body {
+    background: rgba(17, 14, 14, 30%);
+    backdrop-filter: blur(12px);
 }
 
 .calc-container {
