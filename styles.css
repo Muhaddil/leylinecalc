@@ -59,11 +59,11 @@ h3 { font-family: "Ubuntu"; font-size: var(--size3); color: var(--text-norm); fo
 }
 
 html {
-    background-image: 
-    url("public/globe.png");
+    /* background-image: 
+    url("/public/globe.png");
     background-position: left top, center;
     background-repeat: no-repeat, repeat;
-    background-size: cover;
+    background-size: cover; */
     background-color: var(--bg);
     overflow-x: hidden !important;
 }
@@ -74,18 +74,18 @@ html {
 h1 {
     background: var(--bg);
     position: sticky;
+    top: 0;
     width: 100vw;
     text-align: center;
-    top: 0;
     padding: 20px;
     box-shadow: 0 0 40px 40px var(--bg);
     z-index: 999;
 }
 
-.calc-container, .info-head, .info-body {
+/* .calc-container, .info-head, .info-body {
     background: rgba(17, 14, 14, 30%);
     backdrop-filter: blur(12px);
-}
+} */
 
 .calc-container {
     border: solid 4px var(--primary);
