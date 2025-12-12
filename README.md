@@ -10,4 +10,4 @@ The CSS was terrible and the whole thing looked kind of bad so now it's better :
 
 <h3>A few things to note:</h3>
 - Button animations don't work super well on mobile. I might get it figured out sometime but idk.<br />
-- It kind of looks terrible on Safari lol
+- It's broken as shit on Safari. I have no idea how to fix it ._.
