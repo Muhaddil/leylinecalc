@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: nms;
-  src: url(fonts/geonms-font.ttf);
+  src: url(../fonts/geonms-font.ttf);
 }
 
 @keyframes nuh-uh {
@@ -415,35 +415,10 @@ h1 {
     font-weight: 500;
 }
 
-.lang-flag {
-    width: 20px;
-    height: 15px;
+.fi {
+    width: 1.25em;
+    height: 1.25em;
     border-radius: 2px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-}
-
-.lang-option[data-lang="en"] .lang-flag {
-    background: linear-gradient(to bottom, #012169 0%, #012169 33%, #ffffff 33%, #ffffff 66%, #c8102e 66%, #c8102e 100%);
-    color: #ffffff;
-}
-
-.lang-option[data-lang="es"] .lang-flag {
-    background: linear-gradient(to right, #aa151b 0%, #aa151b 25%, #f1bf00 25%, #f1bf00 75%, #aa151b 75%, #aa151b 100%);
-    color: transparent;
-}
-
-.lang-option[data-lang="fr"] .lang-flag {
-    background: linear-gradient(to right, #002395 0%, #002395 33%, #ffffff 33%, #ffffff 66%, #ed2939 66%, #ed2939 100%);
-    color: transparent;
-}
-
-.lang-option[data-lang="de"] .lang-flag {
-    background: linear-gradient(to bottom, #000000 0%, #000000 33%, #dd0000 33%, #dd0000 66%, #ffcc00 66%, #ffcc00 100%);
-    color: transparent;
 }
 
 @media (max-width: 900px) {

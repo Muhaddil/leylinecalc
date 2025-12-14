@@ -1,9 +1,8 @@
-
 const languageData = {
-    en: { name: "English", flag: "🇬🇧" },
-    es: { name: "Español", flag: "🇪🇸" },
-    // fr: { name: "Français", flag: "🇫🇷" },
-    // de: { name: "Deutsch", flag: "🇩🇪" }
+    en: { name: "English", flagClass: "fi-gb" },
+    es: { name: "Español", flagClass: "fi-es" },
+    // fr: { name: "Français", flagClass: "fi-fr" },
+    // de: { name: "Deutsch", flagClass: "fi-de" }
 };
 
 const translations = {
@@ -63,7 +62,7 @@ const translations = {
         latPlaceholder: "lat",
         longPlaceholder: "long",
         distPlaceholder: "distancia (u)",
-        clearAll: "limpiar todo",
+        clearAll: "Borrar",
         locate: "Localizar",
         tip: "consejo: presiona enter para ir al siguiente campo",
         leylinesHeader: "Las líneas ley aparecerán aquí",
@@ -123,7 +122,7 @@ function createLanguageSelector() {
         option.className = `lang-option ${code === currentLang ? 'active' : ''}`;
         option.dataset.lang = code;
         option.innerHTML = `
-            <span class="lang-flag"></span>
+            <span class="fi ${data.flagClass}"></span>
             <span>${data.name}</span>
         `;
 
@@ -139,8 +138,11 @@ function createLanguageSelector() {
 }
 
 function updateCurrentLanguageButton() {
-    const currentLangCode = document.getElementById('current-lang-code');
-    currentLangCode.textContent = currentLang.toUpperCase();
+    const langCodeSpan = document.getElementById("current-lang-code");
+    const flagSpan = document.querySelector(".lang-current .fi");
+
+    langCodeSpan.textContent = currentLang.toUpperCase();
+    flagSpan.className = `fi ${languageData[currentLang].flagClass}`;
 }
 
 function toggleLanguageDropdown() {
@@ -214,19 +216,19 @@ function updateUI() {
         <p class="textdark">${t.deposits3StarIntro}</p>
         <dl class="textdark">
             <dt>${t.curiousDeposit}</dt>
-                <dd>${t.curiousDesc1}</dd>
-                <dd>${t.curiousDesc2}</dd>
-                <dd>${t.curiousDesc3}</dd>
-                <dd>${t.curiousDesc4}</dd>
+            <dd>${t.curiousDesc1}</dd>
+            <dd>${t.curiousDesc2}</dd>
+            <dd>${t.curiousDesc3}</dd>
+            <dd>${t.curiousDesc4}</dd>
                 <dd>${t.curiousDesc5}</dd> <br>
             <dt>${t.metalFingers}</dt>
-                <dd>${t.metalDesc1}</dd>
+            <dd>${t.metalDesc1}</dd>
                 <dd>${t.metalDesc2}</dd> <br>
             <dt>${t.venomSac}</dt>
-                <dd>${t.venomDesc1}</dd>
-                <dd>${t.venomDesc2}</dd>
-                <dd>${t.venomDesc3}</dd>
-                <dd>${t.venomDesc4}</dd>
+            <dd>${t.venomDesc1}</dd>
+            <dd>${t.venomDesc2}</dd>
+            <dd>${t.venomDesc3}</dd>
+            <dd>${t.venomDesc4}</dd>
         </dl>
     `;
 
