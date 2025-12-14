@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: nms;
-  src: url(fonts/geonms-font.ttf);
+  src: url(../fonts/geonms-font.ttf);
 }
 
 @keyframes nuh-uh {
