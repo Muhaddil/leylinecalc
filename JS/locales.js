@@ -62,7 +62,7 @@ const translations = {
         latPlaceholder: "lat",
         longPlaceholder: "long",
         distPlaceholder: "distancia (u)",
-        clearAll: "Borrar",
+        clearAll: "borrar",
         locate: "Localizar",
         tip: "consejo: presiona enter para ir al siguiente campo",
         leylinesHeader: "Las líneas ley aparecerán aquí",
