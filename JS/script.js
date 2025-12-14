@@ -1,4 +1,5 @@
 "use strict"
+
 function gebi(id) { return document.getElementById(id); }
 
 // elements
@@ -27,45 +28,42 @@ function calc_lines(lat1, lat2, long1, long2, dist) {
     let line_distance;
     let add_list = [], sub_list = [];
     const angles = [-90, 0, 90, 180];
-    
+
     // magic formula
-    line_distance = (655 * Math.hypot((lat2-lat1),(long2-long1))) / dist;
-    
+    line_distance = (655 * Math.hypot((lat2 - lat1), (long2 - long1))) / dist;
+
     // get the longitudes
-    add_list = angles.map(angle => angle + (line_distance/2));
-    sub_list = angles.map(angle => angle - (line_distance/2));
-    
+    add_list = angles.map(angle => angle + (line_distance / 2));
+    sub_list = angles.map(angle => angle - (line_distance / 2));
+
     // combine both lists
     full_list = add_list.concat(sub_list);
-    
+
     // check for out of range
     full_list = full_list.map(line => {
-        if (line > 180)  { line = line - 360; }
+        if (line > 180) { line = line - 360; }
         if (line < -180) { line = line + 360; }
         return line.toFixed(2);  // rounding
     });
-    
+
     // sort list AFTER range checks
-    full_list.sort(function(a, b){return b - a});
-    
+    full_list.sort(function (a, b) { return b - a });
+
     // show laylines
-    full_list.forEach((line,i) => {
-        let LINE_SPAN = gebi(`l${i+1}`);
+    full_list.forEach((line, i) => {
+        let LINE_SPAN = gebi(`l${i + 1}`);
         LINE_SPAN.innerHTML = String(line);
     });
-    
+
     // hide placeholder and show results divs
     DIV_PLCHLDR.classList.remove('shown'); DIV_PLCHLDR.classList.add('hidden');
     DIV_RESULTS.classList.remove('hidden'); DIV_RESULTS.classList.add('shown');
-    HED_RESULTS.innerHTML = 'Leylines at these longitudes:';
-
-    
+    HED_RESULTS.innerHTML = translations[currentLang].leylinesResult;
 }
 
 // check inputs and pass to calc
 function send_inputs() {
     let box_values = [BOX_LA1.value, BOX_LA2.value, BOX_LO1.value, BOX_LO2.value, BOX_DIS.value];
-
     if (box_values.every(val => !isNaN(val) && val !== '' && val !== '-')) {
         // send all inputs to the calc function
         calc_lines(box_values[0], box_values[1], box_values[2], box_values[3], box_values[4]);
@@ -92,20 +90,17 @@ boxes.forEach((box, idx) => {
 
 // clear all
 function clear_inputs() {
-
     // clear inputs
-    boxes.forEach(box => {box.value='';})
-
+    boxes.forEach(box => { box.value = ''; })
     // show placeholder
     DIV_PLCHLDR.classList.remove('hidden'); DIV_PLCHLDR.classList.add('shown');
     DIV_RESULTS.classList.remove('shown'); DIV_RESULTS.classList.add('hidden');
-    HED_RESULTS.innerHTML = 'Leylines will appear here';
-
+    HED_RESULTS.innerHTML = translations[currentLang].leylinesHeader;
 }
 
 // show info panels
 info_array.forEach(([head, body]) => {
-    head.addEventListener('click', function(){
+    head.addEventListener('click', function () {
         if (!head.classList.contains('dropped')) {
             head.classList.add('dropped');
             body.classList.remove('hidden'); body.classList.add('shown');
@@ -119,3 +114,15 @@ info_array.forEach(([head, body]) => {
 
 BTN_LOC.addEventListener('click', send_inputs);
 BTN_CLR.addEventListener('click', clear_inputs);
+
+document.querySelectorAll('.leyline').forEach(leyline => {
+    leyline.addEventListener('click', function () {
+        const text = this.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            this.classList.add('copied');
+            setTimeout(() => {
+                this.classList.remove('copied');
+            }, 1000);
+        });
+    });
+});
