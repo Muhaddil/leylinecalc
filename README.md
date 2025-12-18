@@ -8,6 +8,8 @@ A web-based recreation of my NMS Leyline Calculator, which I originally made in 
 *Note from the future:* I redid the entire thing lmao<br />
 The CSS was terrible and the whole thing looked kind of bad so now it's better :D
 
+---
+
 <h3>A few things to note:</h3>
 - Button animations don't work super well on mobile. I might get it figured out sometime but idk.<br />
-- It's broken as shit on Safari. I have no idea how to fix it ._.
+- I wanted to add a neat background image on top of a solid color but apparently safari hates that so it's not staying ._.
