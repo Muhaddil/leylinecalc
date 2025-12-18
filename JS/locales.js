@@ -1,9 +1,8 @@
 const languageData = {
     en: { name: "English", flagClass: "fi-gb" },
     es: { name: "Español", flagClass: "fi-es" },
-    fr: { name: "Français", flagClass: "fi-fr"}
-    // fr: { name: "Français", flagClass: "fi-fr" },
-    // de: { name: "Deutsch", flagClass: "fi-de" }
+    fr: { name: "Français", flagClass: "fi-fr"},
+    de: { name: "im gange", flagClass: "fi-de" }
 };
 
 const translations = {
