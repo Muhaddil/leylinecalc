@@ -1,6 +1,7 @@
 const languageData = {
     en: { name: "English", flagClass: "fi-gb" },
     es: { name: "Español", flagClass: "fi-es" },
+    fr: { name: "Français", flagClass: "fi-fr"}
     // fr: { name: "Français", flagClass: "fi-fr" },
     // de: { name: "Deutsch", flagClass: "fi-de" }
 };
@@ -77,7 +78,7 @@ const translations = {
         infoStep3: "Camina o conduce <b>al menos 1000u</b> desde tu punto de referencia y registra tu nueva posición en el segundo conjunto.",
         infoStep4: "Usa tu visor para encontrar la distancia entre tu posición actual y el punto de referencia. Regístrala en el campo \"Distancia\".",
         infoNote: "NOTA: La distancia mostrada cuando apuntas a tu marcador cambia de <b>unidades</b> a <b>minutos</b> en algún punto entre 1100u y 1200u.",
-        infoVideo: "También hay una <a class='info-link' target='_blank' href='https://www.youtube.com/watch?v=Ec8QN39GNB8'>guía en vídeo</a> por si necesitas instrucciones más detalladas :)",
+        infoVideo: "También hay una <a class='info-link' target='_blank' href='https://www.youtube.com/watch?v=Ec8QN39GNB8'>guía en vídeo</a> (en Inglés) por si necesitas instrucciones más detalladas :)",
 
         deposits3StarIntro: "Los depósitos de 3 estrellas son un tipo de recurso que se encuentra en todos los planetas. <br>Estos son los diferentes tipos de depósitos:",
         curiousDeposit: "Depósito Curioso:",
@@ -97,6 +98,52 @@ const translations = {
 
         leylinesExplain: "Las líneas ley son líneas de longitud (líneas verticales que van de norte a sur) que generarán depósitos de 3 estrellas. <br><br>Si encuentras una línea ley - ya sea por ti mismo o usando esta herramienta - todo lo que tienes que hacer es ir directamente al Norte o Sur para encontrar depósitos. <br><br>Las líneas ley encontradas usando esta calculadora son válidas entre 45°N y 45°S. Eso no significa que no habrá depósitos. Significa que las líneas ley no son completamente ciertas fuera de ese rango."
     },
+
+    fr: {
+        title: "Calculateur de lignes tellurique",
+        calculator: "Calculateur",
+        info: "Information",
+        firstCoords: "Premières Coordonées:",
+        secondCoords: "Deuxièmes Coordonées:",
+        distanceTravelled: "Distance Parcouru:",
+        latPlaceholder: "lat",
+        longPlaceholder: "long",
+        distPlaceholder: "distance (u)",
+        clearAll: "Éffacer",
+        locate: "Localiser",
+        tip: "astuce: appuyez sur Entrée pour passer au champ de saisie suivant",
+        leylinesHeader: "Les lignes telluriques apparaîtront ici",
+        leylinesResult: "Lignes telluriques à ces longitudes :",
+
+        infoTitle1: "Comment utiliser la calculatrice",
+        infoTitle2: "Que sont les dépôts à 3 étoiles?",
+        infoTitle3: "Que sont les lignes telluriques?",
+
+        infoStep1: "Atterrissez sur n'importe quelle planète et obtenez un point de référence. Il peut s'agir de votre vaisseau spatial, d'une balise de sauvegarde ou d'un repère de navigation.",
+        infoStep2: "Enregistrez vos coordonnées actuelles dans les premiers champs de saisie intitulés « lat » et « long ». N'oubliez pas d'utiliser des nombres décimaux positifs ou négatifs.",
+        infoStep3: "Marchez ou conduisez sur <b>au moins 1000u</b> à partir de votre point de référence et enregistrez votre nouvelle position dans les deuxième champs.",
+        infoStep4: "Utilisez votre visière pour déterminer la distance entre votre position actuelle et le point de référence. Notez cette distance dans le champ « Distance ».",
+        infoNote: "REMARQUE : la distance affichée lorsque vous pointez vers votre marqueur passe de <b>unités</b> à <b>minutes</b> entre 1100u et 1200u.",
+        infoVideo: "On a aussi fait un <a class='info-link' target='_blank' href='https://www.youtube.com/watch?v=Ec8QN39GNB8'>guide vidéo</a> (en Anglais) si vous avez besoin d'instructions plus détaillées :)",
+
+        deposits3StarIntro: "Les dépôts a 3 étoiles sont un type de ressource que l'on trouve sur toutes les planètes. <br>Voici les différents types de dépôts :",
+        curiousDeposit: "Dépôs Curieux:",
+        curiousDesc1: "• Ceux-ci produisent de grandes quantités de <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/raw52'>Moisissure Fugueuse</a>, qui se <b>purifient (5:1) en nanites<b>",
+        curiousDesc2: "• Nécessite l'installation de la technologie <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/tech70'>Laser d'Extraction Avancé</a>.",
+        curiousDesc3: "• Il est recommandé de <b>construire des murs</b> autour d'eux, car ils rouleront après avoir été touchés.",
+        curiousDesc4: "• L'installation de la <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/tech71'>perceuse optique</a> augmente le rendement.",
+        curiousDesc5: "• <em><b>Cette ressource est généralement ce que les gens cherchent.</b></em>",
+        metalFingers: "Doigts de Métal:",
+        metalDesc1: "• Produit de grandes quantités d'<b>uranium</b> ou d'<b>or</b>.",
+        metalDesc2: "• Nécessite l'installation de la technologie <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/tech70'>Laser d'Extraction Avancé</a>.",
+        venomSac: "Sac de Venin:",
+        venomDesc1: "• Produit des <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/cur24'>Sacs de Venin.</a>",
+        venomDesc2: "• Si vous vous approchez trop près, vous serez blessé, et si vous les ramassez, cela <b>alertra les sentinelles au niveau 3</b> (apparition de sentinelles quadrupèdes).",
+        venomDesc3: "• Également disponible via la plante <a class='info-link' target='_blank' href='https://app.nmsassistant.com/catalogue-item/prod173'>Venom Urchin</a>.",
+        venomDesc4: "• Les sacs de venin se vendent pour 60 800 unités",
+
+        leylinesExplain: "Les lignes telluriques sont des lignes de longitude (lignes verticales allant du nord au sud) qui génèrent des dépôts de 3 étoiles. <br><br>Si vous trouvez une ligne tellurique, que ce soit par vous-même ou à l'aide de cet outil, il vous suffit de vous diriger vers le nord ou le sud pour trouver des dépôts.<br><br>Les lignes telluriques trouvées à l'aide de ce calculateur sont valables entre 45°N et 45°S. Cela ne signifie pas qu'il n'y aura pas de dépôts. Cela veut simplement dire que les lignes telluriques ne sont pas tout à fait certaines en dehors de cette région."
+    }
 };
 
 let currentLang = 'en';
